@@ -40,3 +40,7 @@ smakhub/
 ## Валідація
 
 Усі сторінки перевірені за допомогою [W3C Validator](https://validator.w3.org/).
+
+## Посилання на Гіт-репозиторій
+
+https://github.com/KhudikovaMariia/SmakHub
