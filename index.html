@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна — SmakHub</title>
+  <meta name="description" content="SmakHub — книга рецептів, де можна знайти страву за назвою або за продуктами, які є вдома.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.webp" alt="" width="36" height="44">
+        <span>SmakHub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню">&#9776;</button>
+      <nav id="site-nav" class="site-nav" aria-label="Головна навігація">
+        <ul>
+          <li><a href="index.html" aria-current="page">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="login.html">Вхід</a></li>
+          <li><a href="register.html">Реєстрація</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">SmakHub — рецепти під ваші продукти</h1>
+          <p class="hero-lead">Знаходьте страви за назвою, категорією або інгредієнтами, які вже є вдома, зберігайте улюблене та діліться власними рецептами.</p>
+        </div>
+        <img class="hero-logo" src="images/logo-large.webp" width="426" height="520" alt="Логотип SmakHub: кухарський ковпак над книгою рецептів">
+      </section>
+
+      <section class="section" aria-labelledby="search-title">
+        <h2 id="search-title">Що приготуємо?</h2>
+        <form class="search-form" action="catalog.html" method="get" role="search">
+          <div>
+            <label for="search-name">Назва страви</label>
+            <input id="search-name" type="search" name="q" placeholder="Наприклад, борщ">
+          </div>
+          <div>
+            <label for="search-ingredients">Продукти, які є вдома</label>
+            <input id="search-ingredients" type="text" name="ingredients" placeholder="яйця, молоко, борошно">
+          </div>
+          <button class="btn" type="submit">Знайти</button>
+        </form>
+      </section>
+
+      <section class="section" aria-labelledby="categories-title">
+        <h2 id="categories-title">Категорії</h2>
+        <ul class="chip-list">
+          <li><a href="catalog.html?category=breakfast">Сніданок</a></li>
+          <li><a href="catalog.html?category=lunch">Обід</a></li>
+          <li><a href="catalog.html?category=dinner">Вечеря</a></li>
+          <li><a href="catalog.html?category=dessert">Десерт</a></li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="featured-title">
+        <h2 id="featured-title">Рекомендовані рецепти</h2>
+        <ul class="card-grid">
+          <li class="recipe-card">
+            <img src="images/recipe-borshch.webp" width="800" height="600" alt="Тарілка класичного борщу" loading="lazy">
+            <div class="recipe-card-body">
+              <h3><a href="recipe.html">Борщ класичний</a></h3>
+              <ul class="recipe-meta">
+                <li>90 хв</li>
+                <li>Середньо</li>
+                <li><span class="badge">&#9733; 4,8</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="recipe-card">
+            <img src="images/recipe-syrnyky.webp" width="800" height="600" alt="Сирники на тарілці" loading="lazy">
+            <div class="recipe-card-body">
+              <h3><a href="recipe.html">Сирники</a></h3>
+              <ul class="recipe-meta">
+                <li>25 хв</li>
+                <li>Легко</li>
+                <li><span class="badge">&#9733; 4,7</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="recipe-card">
+            <img src="images/recipe-salat.webp" width="800" height="600" alt="Грецький салат у мисці" loading="lazy">
+            <div class="recipe-card-body">
+              <h3><a href="recipe.html">Грецький салат</a></h3>
+              <ul class="recipe-meta">
+                <li>15 хв</li>
+                <li>Легко</li>
+                <li><span class="badge">&#9733; 4,6</span></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <p><a class="btn btn-secondary" href="catalog.html">Усі рецепти</a></p>
+      </section>
+
+      <section class="section" aria-labelledby="why-title">
+        <h2 id="why-title">Чому SmakHub</h2>
+        <ul class="benefits">
+          <li class="benefit">
+            <h3>Пошук за продуктами</h3>
+            <p>Введіть, що є в холодильнику, і отримайте список страв саме з цих продуктів.</p>
+          </li>
+          <li class="benefit">
+            <h3>Рецепти від спільноти</h3>
+            <p>Будь-який зареєстрований користувач може додати власний рецепт, тож добірка постійно оновлюється.</p>
+          </li>
+          <li class="benefit">
+            <h3>Зручно з телефона</h3>
+            <p>Сайт адаптований під смартфони, тому рецепт завжди під рукою просто на кухні.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section text-block" aria-labelledby="how-title">
+        <h2 id="how-title">Як це працює</h2>
+        <ol>
+          <li>Знайдіть рецепт за назвою або за продуктами, які є вдома.</li>
+          <li>Оберіть страву за фото, часом приготування та складністю.</li>
+          <li>Готуйте за покроковою інструкцією й зберігайте вдалі рецепти в «Улюблене».</li>
+        </ol>
+        <p>Хочете більше? <a href="register.html">Зареєструйтеся</a> і діліться власними рецептами.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 SmakHub. Навчальний проєкт, КПІ ім. Ігоря Сікорського.</p>
+      <ul>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
