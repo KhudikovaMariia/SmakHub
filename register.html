@@ -25,6 +25,7 @@
         <ul>
           <li><a href="index.html">Головна</a></li>
           <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
           <li><a href="about.html">Про нас</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="login.html">Вхід</a></li>
@@ -36,19 +37,59 @@
 
   <main id="main">
     <div class="container">
-      <!-- TODO (Учасник 3): форма реєстрації (email, пароль, підтвердження пароля) -->
       <h1>Реєстрація</h1>
-      <p>Тут буде форма реєстрації.</p>
+      <p class="lead">Створіть акаунт, щоб зберігати рецепти в «Улюблене» та публікувати власні.</p>
+
+      <form class="form" action="#" method="post">
+        <div class="form-group">
+          <label for="r-name">Ім'я</label>
+          <input type="text" id="r-name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="r-email">Електронна пошта</label>
+          <input type="email" id="r-email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password" aria-describedby="password-hint">
+          <p class="form-hint" id="password-hint">Щонайменше 8 символів.</p>
+        </div>
+        <div class="form-group">
+          <label for="password-confirm">Підтвердження пароля</label>
+          <input type="password" id="password-confirm" name="password_confirm" required minlength="8" autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label for="r-skill">Рівень кулінарних навичок</label>
+          <select id="r-skill" name="skill">
+            <option value="beginner">Початківець</option>
+            <option value="intermediate">Дещо вмію</option>
+            <option value="advanced">Досвідчений</option>
+          </select>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="r-terms" name="terms" required>
+          <label for="r-terms">Погоджуюся з правилами платформи</label>
+        </div>
+        <button class="btn" type="submit">Створити акаунт</button>
+        <p class="form-footer">Уже маєте акаунт? <a href="login.html">Увійти</a></p>
+      </form>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; 2026 SmakHub. Навчальний проєкт, КПІ ім. Ігоря Сікорського.</p>
-      <ul>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
+      <nav aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
+          <li><a href="login.html">Вхід</a></li>
+          <li><a href="register.html">Реєстрація</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 

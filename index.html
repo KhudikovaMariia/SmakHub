@@ -25,6 +25,7 @@
         <ul>
           <li><a href="index.html" aria-current="page">Головна</a></li>
           <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
           <li><a href="about.html">Про нас</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="login.html">Вхід</a></li>
@@ -35,119 +36,131 @@
   </header>
 
   <main id="main">
-    <div class="container">
-
-      <section class="hero" aria-labelledby="hero-title">
-        <div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-text">
           <h1 id="hero-title">SmakHub — рецепти під ваші продукти</h1>
-          <p class="hero-lead">Знаходьте страви за назвою, категорією або інгредієнтами, які вже є вдома, зберігайте улюблене та діліться власними рецептами.</p>
+          <p class="lead">Знаходьте страви за назвою, категорією або інгредієнтами, які вже є вдома. Зберігайте улюблене та діліться власними рецептами.</p>
+
+          <form class="form search-form" action="catalog.html" method="get" role="search">
+            <div class="form-group">
+              <label for="hero-q">Назва страви</label>
+              <input type="search" id="hero-q" name="q" placeholder="Наприклад, борщ" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="hero-ingredients">Продукти, які є вдома</label>
+              <input type="text" id="hero-ingredients" name="ingredients" placeholder="Наприклад, яйця, сир, помідори">
+              <p class="form-hint">Перелічіть продукти через кому.</p>
+            </div>
+            <button class="btn" type="submit">Знайти рецепти</button>
+          </form>
         </div>
-        <img class="hero-logo" src="images/logo-large.webp" width="426" height="520" alt="Логотип SmakHub: кухарський ковпак над книгою рецептів">
-      </section>
+        <figure class="hero-figure">
+          <img src="images/hero.webp" alt="Стіл із свіжими овочами, зеленню та готовою стравою" width="800" height="600">
+        </figure>
+      </div>
+    </section>
 
-      <section class="section" aria-labelledby="search-title">
-        <h2 id="search-title">Що приготуємо?</h2>
-        <form class="search-form" action="catalog.html" method="get" role="search">
-          <div>
-            <label for="search-name">Назва страви</label>
-            <input id="search-name" type="search" name="q" placeholder="Наприклад, борщ">
-          </div>
-          <div>
-            <label for="search-ingredients">Продукти, які є вдома</label>
-            <input id="search-ingredients" type="text" name="ingredients" placeholder="яйця, молоко, борошно">
-          </div>
-          <button class="btn" type="submit">Знайти</button>
-        </form>
-      </section>
-
+    <div class="container">
       <section class="section" aria-labelledby="categories-title">
         <h2 id="categories-title">Категорії</h2>
-        <ul class="chip-list">
-          <li><a href="catalog.html?category=breakfast">Сніданок</a></li>
-          <li><a href="catalog.html?category=lunch">Обід</a></li>
-          <li><a href="catalog.html?category=dinner">Вечеря</a></li>
-          <li><a href="catalog.html?category=dessert">Десерт</a></li>
+        <ul class="category-list">
+          <li><a href="catalog.html?category=breakfast"><strong>Сніданок</strong><span>Швидкі страви на початок дня</span></a></li>
+          <li><a href="catalog.html?category=lunch"><strong>Обід</strong><span>Супи, салати та гарячі страви</span></a></li>
+          <li><a href="catalog.html?category=dinner"><strong>Вечеря</strong><span>Ситні рецепти після навчання чи роботи</span></a></li>
+          <li><a href="catalog.html?category=dessert"><strong>Десерт</strong><span>Солодке для свята і для себе</span></a></li>
         </ul>
       </section>
 
       <section class="section" aria-labelledby="featured-title">
-        <h2 id="featured-title">Рекомендовані рецепти</h2>
+        <h2 id="featured-title">Рецепти, які люблять готувати</h2>
         <ul class="card-grid">
-          <li class="recipe-card">
-            <img src="images/recipe-borshch.webp" width="800" height="600" alt="Тарілка класичного борщу" loading="lazy">
-            <div class="recipe-card-body">
-              <h3><a href="recipe.html">Борщ класичний</a></h3>
-              <ul class="recipe-meta">
-                <li>90 хв</li>
-                <li>Середньо</li>
-                <li><span class="badge">&#9733; 4,8</span></li>
-              </ul>
-            </div>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/borshch.webp" alt="Тарілка червоного борщу зі сметаною та зеленню" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Обід <span class="badge">&#9733; 4,8<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Борщ класичний</a></h3>
+                <p>Насичений борщ на яловичому бульйоні з буряком, капустою та картоплею.</p>
+                <ul class="meta-list">
+                  <li>Час: 2 год</li>
+                  <li>Складність: Середньо</li>
+                </ul>
+              </div>
+            </article>
           </li>
-          <li class="recipe-card">
-            <img src="images/recipe-syrnyky.webp" width="800" height="600" alt="Сирники на тарілці" loading="lazy">
-            <div class="recipe-card-body">
-              <h3><a href="recipe.html">Сирники</a></h3>
-              <ul class="recipe-meta">
-                <li>25 хв</li>
-                <li>Легко</li>
-                <li><span class="badge">&#9733; 4,7</span></li>
-              </ul>
-            </div>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/syrnyky.webp" alt="Золотисті сирники зі сметаною на тарілці" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Сніданок <span class="badge">&#9733; 4,7<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Сирники з ізюмом</a></h3>
+                <p>Ніжні сирники з кисломолочного сиру — класика сніданку.</p>
+                <ul class="meta-list">
+                  <li>Час: 30 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
           </li>
-          <li class="recipe-card">
-            <img src="images/recipe-salat.webp" width="800" height="600" alt="Грецький салат у мисці" loading="lazy">
-            <div class="recipe-card-body">
-              <h3><a href="recipe.html">Грецький салат</a></h3>
-              <ul class="recipe-meta">
-                <li>15 хв</li>
-                <li>Легко</li>
-                <li><span class="badge">&#9733; 4,6</span></li>
-              </ul>
-            </div>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/carbonara.webp" alt="Спагеті карбонара з беконом і пармезаном" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Вечеря <span class="badge">&#9733; 4,9<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Паста карбонара</a></h3>
+                <p>Вершкова паста з беконом та яйцями без зайвих інгредієнтів.</p>
+                <ul class="meta-list">
+                  <li>Час: 25 хв</li>
+                  <li>Складність: Середньо</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/mug-cake.webp" alt="Шоколадний кекс у керамічній кружці" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Десерт <span class="badge">&#9733; 4,4<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Шоколадний кекс у кружці</a></h3>
+                <p>Десерт для мікрохвильовки: кружка, ложка та п'ять хвилин.</p>
+                <ul class="meta-list">
+                  <li>Час: 5 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
           </li>
         </ul>
-        <p><a class="btn btn-secondary" href="catalog.html">Усі рецепти</a></p>
+        <p class="section-more"><a class="btn btn-secondary" href="catalog.html">Усі рецепти</a></p>
       </section>
 
-      <section class="section" aria-labelledby="why-title">
-        <h2 id="why-title">Чому SmakHub</h2>
-        <ul class="benefits">
-          <li class="benefit">
-            <h3>Пошук за продуктами</h3>
-            <p>Введіть, що є в холодильнику, і отримайте список страв саме з цих продуктів.</p>
-          </li>
-          <li class="benefit">
-            <h3>Рецепти від спільноти</h3>
-            <p>Будь-який зареєстрований користувач може додати власний рецепт, тож добірка постійно оновлюється.</p>
-          </li>
-          <li class="benefit">
-            <h3>Зручно з телефона</h3>
-            <p>Сайт адаптований під смартфони, тому рецепт завжди під рукою просто на кухні.</p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section text-block" aria-labelledby="how-title">
+      <section class="section" aria-labelledby="how-title">
         <h2 id="how-title">Як це працює</h2>
-        <ol>
-          <li>Знайдіть рецепт за назвою або за продуктами, які є вдома.</li>
-          <li>Оберіть страву за фото, часом приготування та складністю.</li>
-          <li>Готуйте за покроковою інструкцією й зберігайте вдалі рецепти в «Улюблене».</li>
+        <ol class="steps-simple">
+          <li><h3>Вкажіть, що є вдома</h3><p>Введіть два-три продукти, і SmakHub покаже страви, які з них можна приготувати.</p></li>
+          <li><h3>Оберіть рецепт</h3><p>Відфільтруйте результати за часом приготування, складністю та категорією.</p></li>
+          <li><h3>Готуйте й зберігайте</h3><p>Дійте за покроковою інструкцією, а вдалі рецепти додавайте в «Улюблене».</p></li>
         </ol>
-        <p>Хочете більше? <a href="register.html">Зареєструйтеся</a> і діліться власними рецептами.</p>
+        <p>Ще не маєте акаунта? <a href="register.html">Зареєструйтеся</a> або <a href="login.html">увійдіть</a>.</p>
       </section>
-
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; 2026 SmakHub. Навчальний проєкт, КПІ ім. Ігоря Сікорського.</p>
-      <ul>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
+      <nav aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
+          <li><a href="login.html">Вхід</a></li>
+          <li><a href="register.html">Реєстрація</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 

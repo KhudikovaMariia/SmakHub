@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Рецепт — SmakHub</title>
-  <meta name="description" content="Сторінка рецепта SmakHub: інгредієнти, покрокове приготування, час і складність.">
+  <title>Борщ класичний — SmakHub</title>
+  <meta name="description" content="Класичний рецепт борщу на яловичому бульйоні: інгредієнти, покрокове приготування, час і складність.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -24,7 +24,8 @@
       <nav id="site-nav" class="site-nav" aria-label="Головна навігація">
         <ul>
           <li><a href="index.html">Головна</a></li>
-          <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html" aria-current="page">Рецепт</a></li>
           <li><a href="about.html">Про нас</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="login.html">Вхід</a></li>
@@ -36,19 +37,149 @@
 
   <main id="main">
     <div class="container">
-      <!-- TODO (Учасник 2): фото страви, інгредієнти (ul), кроки (ol), час, складність -->
-      <h1>Назва рецепта</h1>
-      <p>Тут буде сторінка окремого рецепта.</p>
+      <nav aria-label="Навігаційний ланцюжок">
+        <ol class="breadcrumbs">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li>Борщ класичний</li>
+        </ol>
+      </nav>
+
+      <article class="recipe">
+        <header class="recipe-header">
+          <h1>Борщ класичний</h1>
+          <p class="lead">Насичений борщ на яловичому бульйоні з буряком, капустою та картоплею. Подавайте гарячим зі сметаною та свіжою зеленню.</p>
+          <dl class="recipe-facts">
+            <div><dt>Категорія</dt><dd>Обід</dd></div>
+            <div><dt>Час</dt><dd>2 години</dd></div>
+            <div><dt>Складність</dt><dd>Середньо</dd></div>
+            <div><dt>Порцій</dt><dd>6</dd></div>
+            <div><dt>Оцінка</dt><dd><span class="badge">&#9733; 4,8<span class="visually-hidden"> з 5</span></span></dd></div>
+          </dl>
+        </header>
+
+        <figure class="recipe-photo">
+          <img src="images/recipes/borshch.webp" alt="Тарілка червоного борщу зі сметаною та зеленню" width="1200" height="800">
+          <figcaption>Готовий борщ подають зі сметаною та рубаною зеленню.</figcaption>
+        </figure>
+
+        <div class="recipe-body">
+          <section class="recipe-ingredients" aria-labelledby="ingr-title">
+            <h2 id="ingr-title">Інгредієнти</h2>
+            <h3>Для бульйону</h3>
+            <ul>
+              <li>Яловичина на кістці — 600 г</li>
+              <li>Вода — 3 л</li>
+              <li>Лавровий лист — 2 шт.</li>
+              <li>Сіль — за смаком</li>
+            </ul>
+            <h3>Для борщу</h3>
+            <ul>
+              <li>Буряк — 2 середні (близько 300 г)</li>
+              <li>Картопля — 4 середні</li>
+              <li>Капуста білокачанна — 300 г</li>
+              <li>Морква — 1 шт.</li>
+              <li>Цибуля — 1 шт.</li>
+              <li>Томатна паста — 2 ст. л.</li>
+              <li>Часник — 3 зубчики</li>
+              <li>Олія — 3 ст. л.</li>
+              <li>Лимонний сік або оцет — 1 ст. л.</li>
+            </ul>
+            <h3>Для подачі</h3>
+            <ul>
+              <li>Сметана</li>
+              <li>Зелень кропу та петрушки</li>
+            </ul>
+          </section>
+
+          <section class="recipe-steps" aria-labelledby="steps-title">
+            <h2 id="steps-title">Приготування</h2>
+            <ol>
+              <li>Залийте м'ясо холодною водою, доведіть до кипіння та зніміть піну. Варіть на слабкому вогні близько 1,5 години, наприкінці додайте лавровий лист і сіль.</li>
+              <li>Дістаньте м'ясо з бульйону, відділіть від кістки та наріжте невеликими шматочками.</li>
+              <li>Буряк наріжте соломкою або натріть на крупній тертці. Потушкуйте на сковороді з 1 ст. л. олії, томатною пастою та лимонним соком 10–15 хвилин, щоб зберегти колір.</li>
+              <li>Моркву натріть, цибулю наріжте кубиками й обсмажте на решті олії до м'якості.</li>
+              <li>У киплячий бульйон покладіть картоплю, нарізану кубиками. Через 10 хвилин додайте тонко нашинковану капусту та варіть ще 5–7 хвилин.</li>
+              <li>Додайте тушкований буряк, засмажку та м'ясо. Варіть 5–10 хвилин, перевірте сіль.</li>
+              <li>Вимкніть вогонь, додайте подрібнений часник і зелень. Накрийте кришкою та дайте борщу настоятися 15 хвилин.</li>
+            </ol>
+          </section>
+        </div>
+
+        <section class="recipe-actions" aria-labelledby="save-title">
+          <h2 id="save-title">Сподобався рецепт?</h2>
+          <p>Щоб додати борщ в «Улюблене», потрібно мати акаунт.</p>
+          <p>
+            <a class="btn" href="register.html">Зберегти в улюблене</a>
+            <a class="btn btn-outline" href="login.html">Уже маю акаунт</a>
+          </p>
+        </section>
+      </article>
+
+      <section class="section" aria-labelledby="similar-title">
+        <h2 id="similar-title">Схожі рецепти</h2>
+        <ul class="card-grid">
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/draniki.webp" alt="Хрусткі деруни зі сметаною на тарілці" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Вечеря <span class="badge">&#9733; 4,6<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Деруни з картоплі</a></h3>
+                <p>Хрусткі картопляні деруни з простих і бюджетних продуктів.</p>
+                <ul class="meta-list">
+                  <li>Час: 40 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/greek-salad.webp" alt="Грецький салат з сиром фета та оливками" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Обід <span class="badge">&#9733; 4,6<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Грецький салат</a></h3>
+                <p>Свіжий вегетаріанський салат з овочів, фети та оливок.</p>
+                <ul class="meta-list">
+                  <li>Час: 15 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/pancakes.webp" alt="Стос тонких млинців із ягодами" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Сніданок <span class="badge">&#9733; 4,8<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Млинці на молоці</a></h3>
+                <p>Тонкі млинці, які підходять і з солодкою, і з солоною начинкою.</p>
+                <ul class="meta-list">
+                  <li>Час: 30 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; 2026 SmakHub. Навчальний проєкт, КПІ ім. Ігоря Сікорського.</p>
-      <ul>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
+      <nav aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
+          <li><a href="login.html">Вхід</a></li>
+          <li><a href="register.html">Реєстрація</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 

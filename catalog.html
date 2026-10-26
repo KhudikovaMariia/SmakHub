@@ -25,6 +25,7 @@
         <ul>
           <li><a href="index.html">Головна</a></li>
           <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
           <li><a href="about.html">Про нас</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="login.html">Вхід</a></li>
@@ -36,19 +37,194 @@
 
   <main id="main">
     <div class="container">
-      <!-- TODO (Учасник 2): форма пошуку й фільтрів, сітка карток .recipe-card (див. css/style.css) -->
       <h1>Каталог рецептів</h1>
-      <p>Тут буде список рецептів із пошуком і фільтрами.</p>
+      <p class="lead">Шукайте за назвою чи продуктами та уточнюйте результат фільтрами.</p>
+
+      <form class="form filters" action="catalog.html" method="get" role="search">
+        <div class="filters-grid">
+          <div class="form-group">
+            <label for="f-q">Назва страви</label>
+            <input type="search" id="f-q" name="q" placeholder="Наприклад, сирники">
+          </div>
+          <div class="form-group">
+            <label for="f-ingredients">Інгредієнти</label>
+            <input type="text" id="f-ingredients" name="ingredients" placeholder="яйця, борошно, молоко">
+          </div>
+          <div class="form-group">
+            <label for="f-category">Категорія</label>
+            <select id="f-category" name="category">
+              <option value="">Усі категорії</option>
+              <option value="breakfast">Сніданок</option>
+              <option value="lunch">Обід</option>
+              <option value="dinner">Вечеря</option>
+              <option value="dessert">Десерт</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-time">Час приготування</label>
+            <select id="f-time" name="time">
+              <option value="">Будь-який</option>
+              <option value="15">До 15 хвилин</option>
+              <option value="30">До 30 хвилин</option>
+              <option value="60">До 1 години</option>
+              <option value="61">Понад 1 годину</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-difficulty">Складність</label>
+            <select id="f-difficulty" name="difficulty">
+              <option value="">Будь-яка</option>
+              <option value="easy">Легко</option>
+              <option value="medium">Середньо</option>
+              <option value="hard">Складно</option>
+            </select>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" id="f-veg" name="vegetarian" value="1">
+            <label for="f-veg">Лише вегетаріанські</label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-secondary" type="submit">Застосувати</button>
+          <button class="btn btn-outline" type="reset">Скинути</button>
+        </div>
+      </form>
+
+      <section class="section" aria-labelledby="results-title">
+        <h2 id="results-title">Усі рецепти</h2>
+        <p>Показано рецептів: 8</p>
+        <ul class="card-grid">
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/borshch.webp" alt="Тарілка червоного борщу зі сметаною та зеленню" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Обід <span class="badge">&#9733; 4,8<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Борщ класичний</a></h3>
+                <p>Насичений борщ на яловичому бульйоні з буряком, капустою та картоплею.</p>
+                <ul class="meta-list">
+                  <li>Час: 2 год</li>
+                  <li>Складність: Середньо</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/syrnyky.webp" alt="Золотисті сирники зі сметаною на тарілці" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Сніданок <span class="badge">&#9733; 4,7<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Сирники з ізюмом</a></h3>
+                <p>Ніжні сирники з кисломолочного сиру — класика сніданку.</p>
+                <ul class="meta-list">
+                  <li>Час: 30 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/omelet.webp" alt="Омлет із помідорами та сиром на сковороді" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Сніданок <span class="badge">&#9733; 4,5<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Омлет з сиром і помідорами</a></h3>
+                <p>Швидкий сніданок на одній сковорідці з мінімумом продуктів.</p>
+                <ul class="meta-list">
+                  <li>Час: 10 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/carbonara.webp" alt="Спагеті карбонара з беконом і пармезаном" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Вечеря <span class="badge">&#9733; 4,9<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Паста карбонара</a></h3>
+                <p>Вершкова паста з беконом та яйцями без зайвих інгредієнтів.</p>
+                <ul class="meta-list">
+                  <li>Час: 25 хв</li>
+                  <li>Складність: Середньо</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/greek-salad.webp" alt="Грецький салат з сиром фета та оливками" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Обід <span class="badge">&#9733; 4,6<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Грецький салат</a></h3>
+                <p>Свіжий вегетаріанський салат з овочів, фети та оливок.</p>
+                <ul class="meta-list">
+                  <li>Час: 15 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/pancakes.webp" alt="Стос тонких млинців із ягодами" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Сніданок <span class="badge">&#9733; 4,8<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Млинці на молоці</a></h3>
+                <p>Тонкі млинці, які підходять і з солодкою, і з солоною начинкою.</p>
+                <ul class="meta-list">
+                  <li>Час: 30 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/mug-cake.webp" alt="Шоколадний кекс у керамічній кружці" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Десерт <span class="badge">&#9733; 4,4<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Шоколадний кекс у кружці</a></h3>
+                <p>Десерт для мікрохвильовки: кружка, ложка та п'ять хвилин.</p>
+                <ul class="meta-list">
+                  <li>Час: 5 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="recipe-card">
+              <img src="images/recipes/draniki.webp" alt="Хрусткі деруни зі сметаною на тарілці" width="640" height="480" loading="lazy">
+              <div class="recipe-card-body">
+                <p class="recipe-card-cat">Вечеря <span class="badge">&#9733; 4,6<span class="visually-hidden"> з 5</span></span></p>
+                <h3><a href="recipe.html">Деруни з картоплі</a></h3>
+                <p>Хрусткі картопляні деруни з простих і бюджетних продуктів.</p>
+                <ul class="meta-list">
+                  <li>Час: 40 хв</li>
+                  <li>Складність: Легко</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; 2026 SmakHub. Навчальний проєкт, КПІ ім. Ігоря Сікорського.</p>
-      <ul>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
+      <nav aria-label="Навігація у футері">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="recipe.html">Рецепт</a></li>
+          <li><a href="login.html">Вхід</a></li>
+          <li><a href="register.html">Реєстрація</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
