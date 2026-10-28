@@ -12,7 +12,7 @@
 | `recipes/greek-salad.webp` | картка «Грецький салат» | 800×600 |
 | `recipes/pancakes.webp` | картка «Млинці» | 800×600 |
 | `recipes/mug-cake.webp` | картка «Кекс у кружці» | 800×600 |
-| `recipes/draniki.webp` | картка «Деруни» | 800×600 |
+| `recipes/deruny.webp` | картка «Деруни» | 800×600 |
 | `team/kaliukh.webp` | сторінка «Про нас» | 640×640 |
 | `team/khudikova.webp` | сторінка «Про нас» | 640×640 |
 | `team/koretska.webp` | сторінка «Про нас» | 640×640 |
